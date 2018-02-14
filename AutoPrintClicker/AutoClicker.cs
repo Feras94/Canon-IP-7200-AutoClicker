@@ -53,6 +53,7 @@ namespace AutoPrintClicker
 
             // then we click it
             NativeMethods.SendMessage((int)buttonHandle, BN_CLICKED, 0, IntPtr.Zero);
+            Console.WriteLine($"Click Was Successful At {DateTime.Now.ToShortDateString()} - ${DateTime.Now.ToShortTimeString()}");
         }
     }
 }
