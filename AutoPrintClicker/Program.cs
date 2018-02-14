@@ -14,16 +14,18 @@ namespace AutoPrintClicker
         {
             Console.WriteLine("Canon IP 7200 Auto Clicker");
             Console.WriteLine($"version: {Assembly.GetExecutingAssembly().GetName().Version}");
+            Console.WriteLine("Write `exit` to close the application...");
 
-            Console.WriteLine("==================================");
-            Console.WriteLine("Initializing AutoClicker");
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Initializing AutoClicker...");
 
             var cancellationTokenSource = new CancellationTokenSource();
             var sleepDuration = TimeSpan.FromSeconds(2);
             var autoClicker = new AutoClicker(cancellationTokenSource.Token, sleepDuration);
 
-            Console.WriteLine("==================================");
-            Console.WriteLine("Write `exit` to close the application...");
+            Console.WriteLine("Initialization Was Successful!");
+            Console.WriteLine("Listening To Print Requests...");
+            Console.WriteLine("==========================================");
 
             var autoClickTask = autoClicker.Watch();
 
